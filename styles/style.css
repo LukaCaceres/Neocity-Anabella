@@ -1,0 +1,66 @@
+/*--primary: #ffc8ea;
+--secondary: #3d03fc;
+--secondary_muted: #3d03fca0;
+--tertiary: #f3f3f3;
+--body-font: "National Park", "Arial";
+--body-font-size: 0.85rem;
+--header-font: "Distro", "Georgia";
+--header-font-size: clamp(2rem, 1.8vw, 1.2vw); */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+body{
+  background-image: url(/media/images/bgImage.webp);
+  background-repeat: repeat;
+}
+aside{
+  background-color: white;
+  border: 4px #3d03fc solid;
+  font-family: 'Roboto', sans-serif;
+  height: 50vh;
+  width: 15vw;
+}
+
+aside a{
+  height: 50px;
+}
+
+.elemento{
+  width: 50px;
+}
+.card{
+  border: 2px #3d03fc solid;
+  width: 350px;
+  height: 240px;
+  background-color: #90f4e4;
+  color: #3d03fc;
+  box-shadow: 6px 6px #3d03fca0;
+}
+.card-header{
+  background-color: #f0d1f1;
+  font-family: 'Cute Font', sans-serif;
+  border: 2px #3d03fc solid;
+  
+}
+
+.card-header p{
+  background-color: #f0d1f1;
+  font-size: 25px;
+}
+
+.card-body{
+  font-family: 'Roboto', sans-serif;
+  border: 2px #3d03fc solid;
+  
+}
+
+#itemsVentana{
+  height: 20px;
+}
+
+
+  
