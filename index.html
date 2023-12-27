@@ -28,13 +28,16 @@
         </aside> -->
 
         <div class="wrapper grid grid-cols-4">
-            <div class="card m-8 p-1">
-                <div class="card-header mb-1 flex justify-between px-2 items-center">
-                    <p class="">Welcome!</p>
-                    <img src="/media/images/itemsVentana.png" alt="items ventana" id="itemsVentana" class="">
+            <div class="card m-8 p-1 draggable" id="draggable">
+                <div class="card-header mb-1 flex justify-between px-2 items-center draggableheader" id="draggableheader">
+                    <div class="squareAndTitle flex items-center ">
+                        <img src="/media/images/violetBox.png" alt="" class="h-5">
+                        <h2 class="ml-2" id="">Welcome!</h2>
+                    </div>                  
+                    <img src="/media/images/minimizar.png" alt="items ventana" id="minimizar" class="" onclick="minimizarVentana(), showOnFooter()" >
                 </div>
-                <div class="card-body bg-white p-3">
-                    <p class=" bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur fugit atque voluptate deleniti, temporibus, vitae accusamus tempore odio et ad odit nesciunt mollitia. Laudantium perspiciatis at illum magnam sequi?</p>
+                <div class="card-body bg-white p-2">
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur fugit atque voluptate deleniti, temporibus, vitae accusamus tempore odio et ad odit nesciunt mollitia. Laudantium perspiciatis at illum magnam sequi?</p>
                 </div>        
             </div>
 
@@ -42,13 +45,22 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="p-1 flex float-left">
+        <div class="startButton flex items-center p-1">
+            <img src="/media/images/startIcon.png" alt="" class="">
+            <p class="text-black mx-2">START</p>
+        </div>
 
+        <div class="minimizedItem items-center p-1 mx-2" id="minimizedWelcome" onclick="showAgain()">
+            <img src="/media/images/violetBox.png" alt="">
+            <p class="mb-1 ml-1 mr-3">Welcome</p>
+        </div>
+        
     </footer>
     
       
     
    
-   
+   <script src="script.js"></script>
 </body>
 </html>

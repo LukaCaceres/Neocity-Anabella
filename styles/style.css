@@ -6,11 +6,15 @@
 --body-font-size: 0.85rem;
 --header-font: "Distro", "Georgia";
 --header-font-size: clamp(2rem, 1.8vw, 1.2vw); */
+@font-face {
+  font-family: zpix;
+  src: url(/media/fonts/zpix.ttf) format('truetype');
+}
 
 *{
     box-sizing: border-box;
     margin: 0;
-    
+    font-family:zpix;
 }
 
 body{
@@ -20,7 +24,6 @@ body{
 aside{
   background-color: white;
   border: 4px #3d03fc solid;
-  font-family: 'Roboto', sans-serif;
   height: 50vh;
   width: 15vw;
 }
@@ -37,30 +40,69 @@ aside a{
   width: 350px;
   height: 240px;
   background-color: #90f4e4;
-  color: #3d03fc;
+  color: #431cc4;
   box-shadow: 6px 6px #3d03fca0;
 }
 .card-header{
   background-color: #f0d1f1;
-  font-family: 'Cute Font', sans-serif;
   border: 2px #3d03fc solid;
-  
+  cursor: move;
+  font-weight: bold;
 }
 
-.card-header p{
+.card-header h2{
   background-color: #f0d1f1;
-  font-size: 25px;
 }
 
 .card-body{
-  font-family: 'Roboto', sans-serif;
   border: 2px #3d03fc solid;
-  
 }
 
 #itemsVentana{
   height: 20px;
 }
 
+#draggable{
+  position: absolute;
+}
 
+
+footer{
+  background-color: #f4dbf9;
+  height: 35px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  border-top: 2px white solid;
+  border-left: 3px white solid;
+}
+
+.startButton{
+  border-top: 2px white solid;
+  border-left: 3px white solid;
+  border-bottom: 2px #9672d1 solid;
+  border-right: 2px #9672d1 solid;
+}
+
+.startButton img{
+  height: 19px;
+}
+
+.startButton p{
+  font-size: 17px;
+}
+
+.minimizedItem{
+  border-top: 2px #9672d1 solid;
+  border-left: 2px #9672d1 solid;
+  border-bottom: 2px white solid;
+  border-right: 2px white solid;
+  color: #431cc3;
+  font-size: 13px;
+  display: none;
+}
+
+.minimizedItem img{
+  height: 15px;
+}
   
