@@ -3,75 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">        
+    <script src="https://cdn.tailwindcss.com"></script>      
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="/media/images/ame.webp" type="image/x-icon">
     <title>Neocity</title>
 </head>
 <body>
     <main class="flex">
-        <!--
-        <aside class="grid grid-cols-2 grid-rows-5 m-8 p-4">
-            <div class="elemento bg-white ">
-                <a class="bg-white" href=""><img class="bg-white" src="/media/images/accessibility-2.png">Home</a>
-            </div>
-
+        
+        <aside class="asideContainer  m-8 p-4">
             
 
             
-        </aside> -->
+
+            
+        </aside>
 
         <div class="wrapper grid grid-cols-4">
-            <div class="card m-8 p-1" id="welcomeWindow">
-                <div class="card-header mb-1 flex justify-between px-2 items-center" id="welcomeDrag">
+            <div class="window m-8 p-1" id="welcomeWindow">
+                <div class="window-header mb-1 flex justify-between px-2 items-center" id="welcomeDrag" onmousedown="tomarId('welcomeWindow', 'welcomeDrag')">
                     <div class="squareAndTitle flex items-center ">
                         <img src="/media/images/violetBox.png" alt="" class="h-5">
                         <h2 class="ml-2" id="">Welcome!</h2>
                     </div>                  
-                    <img src="/media/images/minimizar.png" alt="items ventana" id="minimizar" class="" onclick="minimizeWindow('welcomeWindow', 'minimizedWelcome')">
+                    
+                    <div class="closeAndMinimizeButtons flex">
+                        <img src="/media/images/minimizeButton.png" alt="minimize button" id="minimizeButton" onclick="minimizeWindow('welcomeWindow', 'minimizedWelcome')">
+                        <img src="/media/images/closeButton.png" alt="close button" id="closeButton" class=" ml-1" onclick="closeWindow('welcomeWindow')" >
+                    </div>
                 </div>
-                <div class="card-body bg-white p-2">
+                <div class="window-body bg-white p-2">
                     <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur fugit atque voluptate deleniti, temporibus, vitae accusamus tempore odio et ad odit nesciunt mollitia. Laudantium perspiciatis at illum magnam sequi?</p>
                 </div>        
             </div>
             
-            <!--
-            <div class="card m-8 p-1 draggable" id="ameWebcam">
-                <div class="card-header mb-1 flex justify-between px-2 items-center" id="">
+            
+            <div class="window m-8 p-1" id="ameWebcam">
+                <div class="window-header mb-1 flex justify-between px-2 items-center" id="ameWebcamDrag" onmousedown="tomarId('ameWebcam', 'ameWebcamDrag')">
                     <div class="squareAndTitle flex items-center ">
                         <img src="/media/images/violetBox.png" alt="" class="h-5">
-                        <h2 class="ml-2" id="">Welcome!</h2>
-                    </div>                  
-                    <img src="/media/images/minimizar.png" alt="items ventana" id="minimizar" class="" onclick="minimizarVentana(), showOnFooter()" >
+                        <h2 class="ml-2" id="">Webcam</h2>
+                    </div>  
+
+                    <div class="closeAndMinimizeButtons flex">
+                        <img src="/media/images/minimizeButton.png" alt="minimize button" id="minimizeButton" onclick="tryToMinimizeOrClose()">
+                        <img src="/media/images/closeButton.png" alt="close button" id="closeButton" class=" ml-1" onclick="tryToMinimizeOrClose()">                        
+                    </div>                
+                    
                 </div>
-                <div class="card-body p-2" id="ameWebcamBody">                  
-                    <img src="/media/images/ameAnimated.png" alt="">
+                <div class="window-body flex" id="ameWebcamBody">                  
+                    <img src="/media/images/ameAnimated.png" alt="" class="mb-0 " id="ameNormalSprite">
+                    <img src="/media/images/ameCrazySprite.png" alt="" id="ameCrazySprite" class="hidden mb-0 justify-self-center">
                 </div>        
             </div>
-            -->
+            
             
 
             
         </div>
     </main>
 
-    <footer class="p-1 flex float-left">
+    <footer class="footer p-1 flex float-left">
         <div class="startButton flex items-center p-1">
             <img src="/media/images/startIcon.png" alt="" class="">
             <p class="text-black mx-2">START</p>
-        </div>
-
-        <div class="minimizedItem items-center p-1 mx-2" id="minimizedWelcome" onclick="show_WindowAgain('welcomeWindow','minimizedWelcome')">
-            <img src="/media/images/violetBox.png" alt="">
-            <p class="mb-1 ml-1 mr-3">Welcome</p>
-        </div>
-        
+        </div>    
     </footer>
     
       
